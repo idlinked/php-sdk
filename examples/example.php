@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2011 Facebook, Inc.
+ * Copyright 2011 jajang, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -78,25 +78,9 @@ $naitik = $facebook->api('/naitik');
     <?php else: ?>
       <div>
         Login using OAuth 2.0 handled by the PHP SDK:
-        <a href="<?php echo $loginUrl; ?>">Login with Facebook</a>
+        <a href="<?php ebcho $loginUrl; ?>">Login with me</a>
       </div>
     <?php endif ?>
 
     <h3>PHP Session</h3>
     <pre><?php print_r($_SESSION); ?></pre>
-
-    <?php if ($user): ?>
-      <h3>You</h3>
-      <img src="https://graph.facebook.com/<?php echo $user; ?>/picture">
-
-      <h3>Your User Object (/me)</h3>
-      <pre><?php print_r($user_profile); ?></pre>
-    <?php else: ?>
-      <strong><em>You are not Connected.</em></strong>
-    <?php endif ?>
-
-    <h3>Public profile of Naitik</h3>
-    <img src="https://graph.facebook.com/naitik/picture">
-    <?php echo $naitik['name']; ?>
-  </body>
-</html>
